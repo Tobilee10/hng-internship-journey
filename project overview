@@ -1,0 +1,53 @@
+  📘 Project Overview: Hardened Linux Server Deployment (Stage 0 DevOps)
+
+This project focuses on deploying and securing a production-ready Linux server using cloud infrastructure provided by Amazon Web Services. The objective is to implement industry-standard security practices while ensuring the server is properly configured, accessible, and serving both static and API-based content over a secure connection.
+
+At its core, the project emphasizes system hardening, access control, network security, and web service configuration. A virtual machine (EC2 instance) running Ubuntu Linux is provisioned and configured to operate as a secure web server environment.
+
+🔐 Security & Access Control
+
+A key aspect of this project is enforcing strict access policies. A non-root user named hngdevops is created to eliminate direct root usage, reducing the risk of unauthorized system-level access. Administrative privileges are tightly controlled by granting only specific sudo permissions required for system operations.
+
+Secure Shell (SSH) is hardened by:
+
+Disabling password-based authentication entirely
+Enforcing SSH key-based login
+Blocking root login remotely
+
+These measures ensure that only authenticated and authorized users can access the server.
+
+🔥 Network Security (Firewall Configuration)
+
+The server is protected using a firewall configured with Uncomplicated Firewall (UFW). A strict “deny by default” policy is implemented, allowing only essential ports:
+
+22 (SSH) for secure remote access
+80 (HTTP) for web traffic
+443 (HTTPS) for secure web traffic
+
+All other ports are explicitly blocked, minimizing the attack surface and enforcing tight network control.
+
+🌐 Web Server & Application Setup
+
+The server uses Nginx as a lightweight and high-performance web server. It is configured to:
+
+Serve a static HTML page at the root (/) displaying the user’s HNG username visibly
+Provide an API endpoint at /api that returns a structured JSON response with a 200 OK status
+
+This demonstrates the ability to deliver both frontend and backend responses from a single server instance.
+
+🔒 SSL & Secure Communication
+
+To ensure secure communication, SSL/TLS encryption is implemented using Let’s Encrypt certificates via Certbot. The server enforces a strict HTTP to HTTPS redirection using a 301 status code, guaranteeing that all traffic is securely transmitted.
+
+This configuration aligns with modern web security standards and ensures compatibility with automated validation systems.
+
+✅ Outcome
+
+By the end of the project, a fully functional and hardened Linux server is deployed with:
+
+Restricted and secure user access
+Strict firewall enforcement
+Properly configured web services
+Valid SSL encryption with enforced HTTPS
+
+The final system reflects real-world DevOps practices, prioritizing security, precision, and reliability, while meeting strict validation requirements.
