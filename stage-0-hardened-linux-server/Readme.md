@@ -11,7 +11,7 @@
 ### Focus: Server Hardening | Web Server Configuration | SSL | Networking | DNS
 
 ## 📌 Project Overview
-This project focuses on deploying and securing a production-ready Linux server using cloud AWS cloud infrastructure. The objective is to implement industry-standard security practices, including secure shell configuration, firewall enforcement, Nginx web server deployment to serve static HTML page, JSON API endpoint (/api) and HTTPS encryption using Let’s Encrypt.
+This project focuses on deploying and securing a production-ready Linux server using AWS cloud infrastructure. The objective is to implement industry-standard security practices, including secure shell configuration, firewall enforcement, Nginx web server deployment to serve static HTML page, JSON API endpoint (/api) and HTTPS encryption using Let’s Encrypt.
 
 ## Project Architecture
 ```
